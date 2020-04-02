@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>~新規投稿~</h2>
+    <div class="main">
+    <span id="week"><%= @tweet.week %></span>
+    <span id="subject"><%= @tweet.subject %></span>
+    <span id="name"><%= @tweet.name %></span>
+    </div>
+    
+    <%= form_for [@tweet, @review] do |f| %>
+    <div class="rate">
+        <%= f.label :おすすめ度 %>
+        <%= f.select :"rate",[["10","10"],["9","9"],["8","8"],["7","7"],["6","6"],["5","5"],["4","4"],["3","3"],["2","2"],["1","1"]], include_blank:"選択してください"%>
+    </div>
+    <div class="score">
+        <%= f.label :履修して取れた成績 %>
+        <%= f.select :"score",[["AA(特優)","AA(特優)"],["A(優)","A(優)"],["B(良)","B(良)"],["C(可)","C(可)"],["F(不可)","F(不可)"],["X(評価不能)","X(評価不能)"]],
+        include_blank:"選択してください"%>
+    </div>
+    <div class="textarea">
+        <%= f.text_area :review, placeholder: '自分が履修してみた感想や次、履修する人へのアドバイスを書いてね！！' %>
+    </div>
+    <div class="touch">
+        <%= button_tag type: "submit", class: "btn" do %>
+        投稿する
+        <% end %>
+    </div>
+    <% end %>
+</div>

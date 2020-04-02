@@ -1,0 +1,177 @@
+ <div class="contents">
+    <!--スライドショー-->
+    <div class="slick">
+        <div class="image1"><%=image_tag '1.jpg'%></div>
+        <div class="image2"><%=image_tag '2.jpg'%></div>
+        <div class="image3"><%=image_tag '3.jpg'%></div>
+    </div>
+    <!--大見出し-->
+    <h1 id="title">リアルな声聞き単位の取り間違えをなくそう。</h1>
+    <!--小見出し-->
+    <h2><履修したことのある授業のレビューを書こう！></h2>
+    <!--学期変更セレクトタブ-->
+    <select name: year, id="year_number">
+        <option value="">2019年秋学期</option>
+        <option value="1">2019年春学期</option>
+    </select>
+    　<!--トップページ検索-->
+    <%= form_tag('/', method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text"></input>
+    <button class="btn-search" title="検索" type="submit"><i class="fas fa-search"></i></button>
+    <% end %>
+    
+　　<!--タブメニューバー-->
+　　<div class="tab-menu">
+　　    <ul class="tab_list">
+　　        <li id="one" class="selected">月曜日</li>
+　　        <li id="two">火曜日</li>
+　　        <li id="three" >水曜日</li>
+　　        <li id="four">木曜日</li>
+　　        <li id="five">金曜日</li>
+　　        <li id="six">土曜日</li>
+　　    </ul>
+　　    
+　　    <div class="contets_list">
+　　        <div class="one">
+　　        　<% @tweets.each do |tweet| %>
+　　           <a href="/tweets/<%= tweet.id %>"><div class="col6">
+　　                　　<span id="week"><%= tweet.week %></span>
+                        <span id="subject"><%= tweet.subject %></span>
+                        <span id="name"><%= tweet.name %></span>
+                        <i class="fas fa-angle-right"></i>
+                        
+                         <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>
+                      
+                </div></a>
+                <% end %>
+            </div>
+　　        <div class="two">
+    　          <%  @tuesday.each do |tweet| %>
+    　　           <a href="/tweets/<%= tweet.id %>"><div class="col6">
+    　　                　　<span id="week"><%= tweet.week %></span>
+                            <span id="subject"><%= tweet.subject %></span>
+                            <span id="name"><%= tweet.name %></span>
+                            <i class="fas fa-angle-right"></i>
+                             <p class="text-small">
+                                 
+                    <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>  
+                                 
+                    </div></a>
+                    <% end %>
+　　        </div>
+　　        <div class="three">
+　　            <% @wednesday.each do |tweet| %>
+　　           　<a href="/tweets/<%= tweet.id %>"><div class="col6">
+　　                　　<span id="week"><%= tweet.week %></span>
+                        <span id="subject"><%= tweet.subject %></span>
+                        <span id="name"><%= tweet.name %></span>
+                        <i class="fas fa-angle-right"></i>
+                        
+                       <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>   
+                        
+                </div></a>
+                <% end %>
+　　        </div>
+　　        <div class="four">
+　　            <% @thursday.each do |tweet| %>
+　　           <a href="/tweets/<%= tweet.id %>"><div class="col6">
+　　                　　<span id="week"><%= tweet.week %></span>
+                        <span id="subject"><%= tweet.subject %></span>
+                        <span id="name"><%= tweet.name %></span>
+                        <i class="fas fa-angle-right"></i>
+                        
+                        <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>  
+                        
+                </div></a>
+                <% end %>
+　　        </div>
+　　        <div class="five">
+　　           <% @friday.each do |tweet| %>
+　　           <a href="/tweets/<%= tweet.id %>"><div class="col6">
+　　                　　<span id="week"><%= tweet.week %></span>
+                        <span id="subject"><%= tweet.subject %></span>
+                        <span id="name"><%= tweet.name %></span>
+                        <i class="fas fa-angle-right"></i>
+                        
+                        <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>  
+                        
+                </div></a>
+                <% end %>
+　　        </div>
+　　        <div class="six">
+　　           <% @staurday.each do |tweet| %>
+　　           <a href="/tweets/<%= tweet.id %>"><div class="col6">
+　　                　　<span id="week"><%= tweet.week %></span>
+                        <span id="subject"><%= tweet.subject %></span>
+                        <span id="name"><%= tweet.name %></span>
+                        <i class="fas fa-angle-right"></i>
+                        
+                        <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                          <% end %>
+                      </div>  
+                        
+                </div></a>
+                <% end %>
+　　        </div>
+　　    </div>
+　　</div>
+　　　<%= paginate(@tweets) %>
+</div>

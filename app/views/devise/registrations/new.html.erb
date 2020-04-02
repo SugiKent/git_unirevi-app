@@ -1,0 +1,50 @@
+<body id=regstration>
+<div id="main_cnt_wrapper">
+  <div id="yjContentsBody">
+    <div class="yjConteainer">
+      <div class="form_box">
+        <h2>unirevi<span>新規登録</span></h2>
+        
+         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %> 
+          
+         <div class="label"><%= f.label :ニックネーム %><br />
+          <%= f.text_field :nickname, placeholder: 'ニックネームを入力(必須)' %></div>
+          
+          <div class="label"><%= f.label :メールアドレス %>
+          <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %></div>
+          
+          <div class="label"><%= f.label :パスワード %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+          <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力' %></div>
+          
+          <div class="label"><%= f.label :パスワード確認 %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）' %></div>
+          
+          <div class="label"><%= f.label :学年 %><br />
+          <%= f.select :"grade",[["1年生","1年生"],["2年生","2年生"],["3年生","3年生"],["4年生","4年生"]], include_blank:"選択したください"%></div>
+          
+          <div class="label"><%= f.label :学部 %><br />
+          <%= f.select :"faculty",[["外国語学部&英語学科","外国語学部＆英語学科"],["外国語学部&フランス語学科","外国語学部＆フランス語学科"],
+          ["外国語学部&ドイツ語学科","外国語学部＆ドイツ語学科"],["外国語学部&交流文化学科","外国語学部＆交流文化学科"],
+          ["国際教養学部&言語文化学科","国際教養学部&言語文化学科"],["経済学部&経済学科","経済学部&経済学科"],["経済学部&経営学科","経済学部&経営学科"],
+          ["経済学部&国際環境経済学科","経済学部&国際環境経済学科"],["法律学部&法律学科","法律学部&法律学科"],["法律学部&国際関係法学科","法律学部&国際関係法学科"],
+          ["法律学部&総合政策学科","法律学部&総合政策学科"]],include_blank:"選択したください"%></div>
+           
+          <div class="file"><%= f.label :アイコン %><br />
+          <%= f.file_field :image %></div> 
+           
+           <div class="submit">
+          <div class="actions">
+          <%= f.submit "登録する" %>
+          </div></div>
+          
+          <div class="more_link_box">
+          <strong>すでにアカウントを持っていますか？</strong>
+          <%= render "devise/shared/links" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

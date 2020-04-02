@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="information">
+              <div class="title">
+                <h3>
+                 <%= @tweet.subject %>
+                </h3>
+                <div class="professor">
+                <h4><%= @tweet.name %></h4>
+                </div>
+                <header class="header-section">
+                <h4>基本情報</h4>
+                </header>
+                <div class="details">
+                  <h5>~授業の内容~</h5>
+                  <p><%= @tweet.detail %></p>
+                </div>
+                <div class="evaluation">
+                    <h5>~評価方法~</h5>
+                    <P><%= @tweet.evaluation %></P>
+                </div>
+              </div>
+              <div class="review">
+                <a class="new_btn" href="/tweets/<%= @tweet.id %>/reviews/new">この授業のレビューを書く</a>
+              </div>
+              <div class="comment">
+                  <div class="header-section">
+                  <h4>みんなのレビュー一覧</h4>
+                  </div>
+                  <div class="comment">
+                  <% @tweet.reviews.each do |review| %>
+                  <a class="mypage" href="/users/id"><h4><<%= review.user.nickname %>></h4></a>
+                  <div class="scores">
+                  <span><%= review.score %></>
+                  </div>
+                  <span class="rating-star"><i class="star-actived  rate-<%= review.rate %>0"></i>
+                  </span>
+
+                  <p><%= review.review %></p>
+                  <% end %>
+                  </div>
+              </div>
+     </div>
+</div>
