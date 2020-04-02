@@ -12,4 +12,9 @@ class TweetsController < ApplicationController
         @tweet =Tweet.find(params[:id])
     end
     
+     before_action :ranking
+  def ranking
+    tweet_ids = Review.group(:tweet_id).order('count_tweet_id DESC').limit(10).count(:tweet_id).keys
+    @ranking = tweet_ids.map {|id| Tweet.find(id) }
+  end
 end

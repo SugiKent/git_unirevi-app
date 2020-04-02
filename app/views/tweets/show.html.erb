@@ -27,16 +27,16 @@
                   <h4>みんなのレビュー一覧</h4>
                   </div>
                   <div class="comment">
-                  <% @tweet.reviews.each do |review| %>
-                  <a class="mypage" href="/users/id"><h4><<%= review.user.nickname %>></h4></a>
-                  <div class="scores">
-                  <span><%= review.score %></>
-                  </div>
-                  <span class="rating-star"><i class="star-actived  rate-<%= review.rate %>0"></i>
-                  </span>
-
-                  <p><%= review.review %></p>
-                  <% end %>
+                      <% @tweet.reviews.each do |review| %>
+                      <a class="mypage" href="/users/id"><h4><<%= review.user.nickname %>></h4></a>
+                      <div class="scores">
+                      <span><%= review.score %></>
+                      </div>
+                      <span class="rating-star"><i class="star-actived  rate-<%= review.rate %>0"></i>
+                      </span>
+    
+                      <p><%= review.review %></p>
+                      <% end %>
                   </div>
               </div>
      </div>
