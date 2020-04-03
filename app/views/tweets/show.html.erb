@@ -28,7 +28,7 @@
                   </div>
                   <div class="comment">
                       <% @tweet.reviews.each do |review| %>
-                      <a class="mypage" href="/users/id"><h4><<%= review.user.nickname %>></h4></a>
+                      <a class="mypage" href="/users/<%= review.user_id %>"><h4><<%= review.user.nickname %> <%= review.user.faculty %> <%= review.user.grade %>></h4></a>
                       <div class="scores">
                       <span><%= review.score %></>
                       </div>
@@ -41,3 +41,36 @@
               </div>
      </div>
 </div>
+
+<div class="sub-contentss">
+　　   <div class="sub-title2">
+　　   　<i class="fas fa-chess-queen"></i>
+            <h4 class="text-ranking">
+              投稿数が多いランキング
+            </h4>
+            </div>
+            <div class="rank">
+            <% @ranking.each.with_index(1) do |tweet, i| %>
+             <span class="number"><%= i %>位</span>
+                <a href="/tweets/<%= tweet.id %>">
+                  <div class="frame">
+                      <span><%= tweet.week %></span>
+                      <span class="text-subject"><%= tweet.subject %></sapn>
+                      <span class="text-name"><%= tweet.name %></span>
+                      
+                      <div class="text-small">
+                        <% if tweet.reviews.present? %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-<%= tweet.review_average %>0"></i>
+                        </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                          </span>
+                        <% end %>
+                      </div>
+                      
+                     </div></a>  
+                  <% end %>
+             </div>
+          </div>

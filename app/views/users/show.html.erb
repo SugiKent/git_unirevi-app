@@ -1,0 +1,24 @@
+ <header class="user_page-header">
+<a href="">
+       <div class="image5"><%=image_tag '5.png'%></div>
+          <h2><%= current_user.nickname %></h2>
+          <div class="sub-pro">
+          <span><%= current_user.faculty %></span>
+          <span><%= current_user.grade %></span>
+          </div>
+      </a>
+ </header>
+ <div class="past_comment">
+     <h3>○過去のレビュー投稿一覧○</h3>
+          <%  current_user.reviews.each do |review| %> 
+         <div class="my-comment">
+          <h4><<%= review.tweet.week %><%= review.tweet.subject %><%= review.tweet.name %>></h4>
+          
+           <div class="write">
+           <p>おすすめ度: <%= review.rate %></p>
+           <p>履修して取れた成績: <%= review.score %></p>
+          <div class="user_review"><%= review.review %></div>
+          <% end %>
+         </div>
+       </div>
+ </div>
