@@ -1,241 +1,281 @@
+// なぜstyle.cssとstyle.scssの両方があるのかわからないが、統一したい
 // ページ全体のデザイン
- body {
+body {
   height: 100%;
-  width:100%;
-  background-color:#b0c4de;
-  
- }
- // ヘッダーのデザイン
- .header {
-    background-color : #6495ed;
-    height:60px; 
-    
-    .user_nav {
+  width: 100%;
+  background-color: #b0c4de;
+
+}
+
+// ヘッダーのデザイン
+.header {
+  background-color: #6495ed;
+  height: 60px;
+
+  .user_nav {
     position: relative;
     height: 100px;
     position: absolute;
     right: 0;
-    }
-    .user__info li {
-     padding:0px;
-    }
-    .user__info li a {
-     width: 120px;
-        display:inline-left;
-        margin-left: 10px;
-     border: solid 1px #ffffff;
-     border-radius:3px;
-     padding:5px;
-     color:white;
-    }
-   h1.grid-6 {
-     padding:13px 150px;
-     float:left;
-    }
-    div.grid-6 {
-      float: right;
-      text-align: right;
-       margin:20px;
-       position:relative;
-       right:100px;
-    }
-    a.post {
-        width: 120px;
-        display:inline-left;
-        margin-left: 10px;
-     border: solid 1px #ffffff;
-     border-radius:3px;
-     padding:5px;
-     color:white;
-    }
-    ul {
-     list-style: none;
-    }
+  }
+
+  .user__info li {
+    padding: 0px;
+  }
+
+  .user__info li a {
+    width: 120px;
+    display: inline-left;
+    margin-left: 10px;
+    border: solid 1px #ffffff;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+  }
+
+  h1.grid-6 {
+    padding: 13px 150px;
+    float: left;
+  }
+
+  div.grid-6 {
+    float: right;
+    text-align: right;
+    margin: 20px;
+    position: relative;
+    right: 100px;
+  }
+
+  a.post {
+    width: 120px;
+    display: inline-left;
+    margin-left: 10px;
+    border: solid 1px #ffffff;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+  }
+
   li {
     padding: 10px 300px;
-    float:left;
+    float: left;
   }
+
   a {
-   text-decoration: none;
-   color:#000000;
+    text-decoration: none;
+    color: #000000;
   }
 }
+
 // フッターのデザイン
 .footer {
-    background-color: #6495ed ;
-    height: 150px;
-    position:absolute;
-    bottom:-7000px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    width:100%;
-    padding:40px 0;
-    font-size:15px;
-    a {
-     text-decoration: none;
-     padding:25px ;
-     border-right:1px solid ;
-     color: black;
-    }
-    .footer-copy {
-     margin: 30px;
-    }
+  background-color: #6495ed;
+  height: 150px;
+  position: absolute;
+  bottom: -7000px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+  font-size: 15px;
+
+  a {
+    text-decoration: none;
+    padding: 25px;
+    border-right: 1px solid;
+    color: black;
+  }
+
+  .footer-copy {
+    margin: 30px;
+  }
 }
+
 // トップページのスライドのデザイン
 .contents {
-  height:100%;
-  width:100%;
-  position:absolute;
-   .slick {
-    width:100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  .slick {
+    width: 100%;
   }
-  
-  img { 
-   display:inline-block;
+
+  img {
+    display: inline-block;
     height: auto;
     width: 100%;
-    
+
   }
-  .image1 img{
-   height:400px;
+
+  .image1 img {
+    height: 400px;
   }
-  
+
   .image2 img {
-   height:400px;
+    height: 400px;
   }
-  
+
   .image3 img {
-   height:400px;
+    height: 400px;
   }
 }
+
 // タブメニューのタブのデザイン
 .tab-menu {
- width:750px;
- margin-top:10px;
- margin-left:50px;
- background-color:#fff8dc;
- height:auto;
- .tab_list {
-  margin-top:50px;
-  margin:0px;
-  padding:0px;
- }
- .tab_list li {
-  display:inline-block;
-  width:125px;
-  height:45px;
-  background-color:#f5deb3;
-  font-size:15px;
-  color:#000000;
-  padding:13px 15px 5px;
-  margin:0px;
-  cursor:pointer;
-  text-align:center;
-  border-top-right-radius:15px;
- }
- // selectedに与えられたものに対するcss
- .tab_list .selected {
-  background-color:#000000;
-  color:#ffffff;
- }
- #one {
-  position:relative;
-  top:-30px;
-  left:-36px;
- }
- #two {
-  position:relative;
-  top:-30px;
-  left:-76px;
- }
- #three {
-  position:relative;
-  top:-30px;
-  left:-116px;
- }
- #four {
-  position:relative;
-  top:-30px;
-   left:-156px;
- }
- #five {
-  position:relative;
-  top:-75px;
-  right:-500px;
- }
- #six {
-  position:relative;
-  top:-75px;
-  right:-460px;
- }
+  width: 750px;
+  margin-top: 10px;
+  margin-left: 50px;
+  background-color: #fff8dc;
+  height: auto;
+
+  .tab_list {
+    margin-top: 50px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .tab_list li {
+    display: inline-block;
+    width: 125px;
+    height: 45px;
+    background-color: #f5deb3;
+    font-size: 15px;
+    color: #000000;
+    padding: 13px 15px 5px;
+    margin: 0px;
+    cursor: pointer;
+    text-align: center;
+    border-top-right-radius: 15px;
+  }
+
+  // selectedに与えられたものに対するcss
+  .tab_list .selected {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  #one {
+    position: relative;
+    top: -30px;
+    left: -36px;
+  }
+
+  #two {
+    position: relative;
+    top: -30px;
+    left: -76px;
+  }
+
+  #three {
+    position: relative;
+    top: -30px;
+    left: -116px;
+  }
+
+  #four {
+    position: relative;
+    top: -30px;
+    left: -156px;
+  }
+
+  #five {
+    position: relative;
+    top: -75px;
+    right: -500px;
+  }
+
+  #six {
+    position: relative;
+    top: -75px;
+    right: -460px;
+  }
 }
+
 // タブメニューの中身のコンテンツのデザイン
 .contets_list {
- padding:20px;
- // 最初は一番左だけ表示したいので以下で隠す
- .two {
-  display:none;
- }
- .three {
-  display:none;
- }
- .four {
-  display:none;
- }
- .five {
-  display:none;
- }
- .six {
-  display:none;
- }
+  padding: 20px;
+
+  // 最初は一番左だけ表示したいので以下で隠す
+  .two {
+    display: none;
+  }
+
+  .three {
+    display: none;
+  }
+
+  .four {
+    display: none;
+  }
+
+  .five {
+    display: none;
+  }
+
+  .six {
+    display: none;
+  }
 }
+
 // 単位の見出し
- #title {
-  text-align:center;
+#title {
+  text-align: center;
   border-bottom: 2px solid #d7dbe2;
- }
+}
+
 // スライドショーの下の見出しのデザイン
 h2 {
- text-align:center;
- padding:30px;
+  text-align: center;
+  padding: 30px;
 }
+
 // 新規登録画面&ログイン画面デザイン
 #main_cnt_wrapper {
-   position:relative;
-   width:100%;
-   margin:0 auto;
-   padding:0;
-   
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
   .yjConteainer {
-   width:950px;
-   margin:0 auto;
-  padding:0 10px;
+    width: 950px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
+
   .form_box {
-   text-align:center;
-   margin-top:10%;
+    text-align: center;
+    margin-top: 10%;
   }
-   h2 {
-    color:#6495ed;
+
+  h2 {
+    color: #6495ed;
     font-size: 24px;
-   }
-   span {
-    display:block;
-    font-size:12px;
-    color:#999;
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    color: #999;
     font-weight: normal;
-   }
-   .label {
+  }
+
+  .label {
     width: 330px;
     text-align: left;
     margin: 0 auto;
     display: block;
     padding: 10px 0;
     font-size: 12px;
-  
-   }
-   input {
+
+  }
+
+  input {
     font-size: 14px;
     line-height: 30px;
     height: 40px;
@@ -246,8 +286,9 @@ h2 {
     border-color: #EAEAEA;
     border: solid 1px #ccc;
     border-radius: 6px;
-   }
-   .submit input {
+  }
+
+  .submit input {
     font-size: 14px;
     line-height: 40px;
     height: 40px;
@@ -258,15 +299,17 @@ h2 {
     color: #fff;
     display: block;
     border: 0;
-    border-radius:30px;
-   }
-   .more_link_box {
+    border-radius: 30px;
+  }
+
+  .more_link_box {
     border-top: 1px solid #ddd;
     width: 330px;
     margin: auto;
     padding: 10px 0;
     font-size: 12px;
-   }
+  }
+
   .more_link_box a {
     border: 1px solid #ddd;
     background-color: transparent;
@@ -275,48 +318,55 @@ h2 {
     margin: 10px auto;
     border-radius: 3px;
     height: 30px;
-    padding:6px;
+    padding: 6px;
     text-decoration: none;
     color: #6495ed;
-   }
-   .row {
+  }
+
+  .row {
     width: 330px;
-    margin:auto;
-    
-   }
-   .col-xs-6{
+    margin: auto;
+
+  }
+
+  .col-xs-6 {
     width: 48%;
     float: left;
     text-align: left;
     font-size: 12px;
-    padding:0;
-   }
-   .col-xs-6:nth-child(2) {
+    padding: 0;
+  }
+
+  .col-xs-6:nth-child(2) {
     float: right;
     text-align: right;
-   }
-   .col-xs-6 input {
+  }
+
+  .col-xs-6 input {
     width: 10%;
     box-sizing: border-box;
-    padding:0;
-    margin-top:0;
-    height:5px;
+    padding: 0;
+    margin-top: 0;
+    height: 5px;
     float: left;
-   }
-   select {
+  }
+
+  select {
     border: 1px solid #ddd;
-     -moz-appearance: menulist;
-     -webkit-appearance: menulist;
-   }
-   .file {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+  }
+
+  .file {
     width: 330px;
     text-align: left;
     margin: 0 auto;
     display: block;
     padding: 10px 0;
     font-size: 12px;
-   }
-   .file input {
+  }
+
+  .file input {
     font-size: 13px;
     line-height: 10px;
     height: 30px;
@@ -327,437 +377,514 @@ h2 {
     border-color: #EAEAEA;
     border: solid 1px #ccc;
     border-radius: 6px;
-   } 
-   // ログイン、新規登録画面の背景デザイン
-}
-#regstration {
- background-color:#e0ffff;
-}
-// ドップページの学期表示のセレクトボックスデザイン
-#year_number {
- border: 2px solid #fff;
-  -moz-appearance: menulist;
-     -webkit-appearance: menulist;
-   margin:0 0 15px 100px;
-}
-// タブ月曜日の中身のデザイン
-.one {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  background-color:#6495ed;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
   }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// タブ火曜日の中身のデザイン
-.two {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  background-color:#6495ed;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
-  }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// タブ水曜日の中身デザイン
-.three {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  background-color:#6495ed;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
-  }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// タブに木曜日の中身のデザイン
-.four {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  background-color:#6495ed;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
-  }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// タブの金曜日の中身のデザイン
-.five {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  border: 2px solid #b0c4de;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
-  }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// タブに土曜日の中身のデザイン
-.six {
- margin-top:-120px;
-  a {
-  text-decoration: none;
-  color:#000000;
- }
- .col6:hover {
-  background-color:#6495ed;
-  opacity:0.8;
- }
- .col6 {
-  border: 2px solid #b0c4de;
-  border-radius:3px;
-  margin:5px;
-  padding:5px;
-  padding-left:40px;
- }
- #week {
-  margin-left:-50px;
-  }
- #subject {
-  margin-left:30px;
- }
-#name {
- margin-left:25px;
- }
-}
-// 矢印
-.fas {
- margin-left:50px;
-}
-// トップページ検索ボタン
- .search__query {
-  border: solid 2px #fff;
-  border-radius:5px;
-  padding:5px;
-  margin-left:90px;
-  padding-right:50px;
- }
-  .fa-search {
-  margin-left:-1px;
- }
- // ページネーションのデザイン
- .pagination {
-  margin-left:50px;
- }
- nav a {
-  text-decoration: none;
-   color:#6495ed;
-   margin:5px;
-   padding:2px;
-   font-size:18px;
- }
-nav span:hover {
- background-color:#1e90ff;
- opacity:0.7;
- border-radius:20px;
-}
-// 詳細ページのデザイン
-.container {
- width:750px;
- margin-top:15px;
- margin-left:50px;
- background-color:#fff8dc;
- height:auto;
- 
- h3 {
-  text-align:center;
-  padding:10px;
- }
- .header-section {
-  border-bottom: 3px solid #d7dbe2;
-  width:700px;
-  margin-bottom:10px;
- }
- h4 {
-  margin-left:20px;
- }
- h5 {
-  font-size:15px;
-  margin-left:10px;
- }
- p {
-  padding:10px;
- }
- .review {
-  text-align:right;
-  padding:10px 30px;
- }
- .new_btn  {
-  text-decoration: none;
-  color:#6495ed;
-  font-size:20px;
-  border: 2px solid #b0c4de;
-  border-radius:5px;
- }
- .new_btn:hover {
-  background-color:#1e90ff;
-  opacity:0.5;
-  color:black;
- }
- .professor {
-  text-align:right;
-  margin-right:120px;
- }
-}
-// 新規投稿画面のデザイン
-textarea {
- height:300px;
- width:730px;
- border: 1px solid #ddd;
- margin:10px;
-}
-.main {
- text-align:center;
- border: 2px solid #b0c4de;
-  border-radius:5px;
-  margin:5px 40px;
-  padding:10px;
-  
-  span {
-   margin-right:30px;
-  }
-}
-.rate {
- margin-top:20px;
- margin-left:40px;
-}
-form select {
-    border: 1px solid #ddd;
-     -moz-appearance: menulist;
-     -webkit-appearance: menulist;
-}
-.score {
- margin-top:5px;
- margin-left:40px;
+
+  // ログイン、新規登録画面の背景デザイン
 }
 
- .touch{
- text-align:center;
- margin:10px;
- padding-bottom:30px;
- 
- .btn {
-  background-color:#6495ed;
+#regstration {
+  background-color: #e0ffff;
+}
+
+// ドップページの学期表示のセレクトボックスデザイン
+#year_number {
+  border: 2px solid #fff;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  margin: 0 0 15px 100px;
+}
+
+// タブ月曜日の中身のデザイン
+.one {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    background-color: #6495ed;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// タブ火曜日の中身のデザイン
+.two {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    background-color: #6495ed;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// タブ水曜日の中身デザイン
+.three {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    background-color: #6495ed;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// タブに木曜日の中身のデザイン
+.four {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    background-color: #6495ed;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// タブの金曜日の中身のデザイン
+.five {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    border: 2px solid #b0c4de;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// タブに土曜日の中身のデザイン
+.six {
+  margin-top: -120px;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .col6:hover {
+    background-color: #6495ed;
+    opacity: 0.8;
+  }
+
+  .col6 {
+    border: 2px solid #b0c4de;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  #week {
+    margin-left: -50px;
+  }
+
+  #subject {
+    margin-left: 30px;
+  }
+
+  #name {
+    margin-left: 25px;
+  }
+}
+
+// 矢印
+.fas {
+  margin-left: 50px;
+}
+
+// トップページ検索ボタン
+.search__query {
+  border: solid 2px #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 90px;
+  padding-right: 50px;
+}
+
+.fa-search {
+  margin-left: -1px;
+}
+
+// ページネーションのデザイン
+.pagination {
+  margin-left: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6495ed;
+  margin: 5px;
+  padding: 2px;
+  font-size: 18px;
+}
+
+nav span:hover {
+  background-color: #1e90ff;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+
+// 詳細ページのデザイン
+.container {
+  width: 750px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-color: #fff8dc;
+  height: auto;
+
+  h3 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .header-section {
+    border-bottom: 3px solid #d7dbe2;
+    width: 700px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    margin-left: 20px;
+  }
+
+  h5 {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  .review {
+    text-align: right;
+    padding: 10px 30px;
+  }
+
+  .new_btn {
+    text-decoration: none;
+    color: #6495ed;
+    font-size: 20px;
+    border: 2px solid #b0c4de;
+    border-radius: 5px;
+  }
+
+  .new_btn:hover {
+    background-color: #1e90ff;
+    opacity: 0.5;
+    color: black;
+  }
+
+  .professor {
+    text-align: right;
+    margin-right: 120px;
+  }
+}
+
+// 新規投稿画面のデザイン
+textarea {
+  height: 300px;
+  width: 730px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+
+.main {
+  text-align: center;
+  border: 2px solid #b0c4de;
+  border-radius: 5px;
+  margin: 5px 40px;
+  padding: 10px;
+
+  span {
+    margin-right: 30px;
+  }
+}
+
+.rate {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+form select {
+  border: 1px solid #ddd;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+
+.score {
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+.touch {
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 30px;
+
+  .btn {
+    background-color: #6495ed;
     color: #686c73;
     box-shadow: 0 5px 0 0 #4169e1;
     border: 0 solid #b9c0cd;
-    width:500px;
-    height:40px;
- }
- .btn:active {
-  position:relative;
-  top:5px;
-  box-shadow:none;
- }
+    width: 500px;
+    height: 40px;
+  }
+
+  .btn:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+  }
 }
+
 // 詳細レビューの部分のデザイン
 .comment {
- padding:10px;
- 
- .mypage {
-  text-decoration: none;
-  color:#6495ed;
-  float:left;
- }
- .scores span {
- float:left;
- margin:0 15px;
- }
- p {
-  margin-bottom:10px;
-  border-bottom:dotted 1px;
- }
- // 詳細ページの星のデザイン
-.rating-star {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: auto;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.1);
-  margin-top:2px;
-}
-.rating-star:before {
-  content: "\2605\2605\2605\2605\2605";
-   font-size:20px;
-}
-.star-actived{
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  width: 0;
-  color: #F5A624;
-  font-style: normal;
-  word-wrap: normal;
-}
- .star-actived:before {
-  content: "\2605\2605\2605\2605\2605";
-   font-size:20px;
-}
-.rating-star .rate-100 {
-  width: 100%;
+  padding: 10px;
+
+  .mypage {
+    text-decoration: none;
+    color: #6495ed;
+    float: left;
+  }
+
+  .scores span {
+    float: left;
+    margin: 0 15px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    border-bottom: dotted 1px;
+  }
+
+  // 詳細ページの星のデザイン
+  .rating-star {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.1);
+    margin-top: 2px;
+  }
+
+  .rating-star:before {
+    content: "\2605\2605\2605\2605\2605";
+    font-size: 20px;
+  }
+
+  .star-actived {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    color: #F5A624;
+    font-style: normal;
+    word-wrap: normal;
+  }
+
+  .star-actived:before {
+    content: "\2605\2605\2605\2605\2605";
+    font-size: 20px;
+  }
+
+  .rating-star .rate-100 {
+    width: 100%;
+  }
+
+  .rating-star .rate-90 {
+    width: 90%;
+  }
+
+  .rating-star .rate-80 {
+    width: 80%;
+  }
+
+  .rating-star .rate-70 {
+    width: 70%;
+  }
+
+  .rating-star .rate-60 {
+    width: 60%;
+  }
+
+  .rating-star .rate-50 {
+    width: 50%;
+  }
+
+  .rating-star .rate-40 {
+    width: 40%;
+  }
+
+  .rating-star .rate-30 {
+    width: 30%;
+  }
+
+  .rating-star .rate-20 {
+    width: 20%;
+  }
+
+  .rating-star .rate-10 {
+    width: 10%;
+  }
+
+  .rating-star .rate-5 {
+    width: 100%;
+  }
+
+  .rating-star .rate-4 {
+    width: 80%;
+  }
+
+  .rating-star .rate-3 {
+    width: 60%;
+  }
+
+  .rating-star .rate-2 {
+    width: 40%;
+  }
+
+  .rating-star .rate-1 {
+    width: 20%;
+  }
 }
 
-.rating-star .rate-90 {
-  width: 90%;
-}
-
-.rating-star .rate-80 {
-  width: 80%;
-}
-
-.rating-star .rate-70 {
-  width: 70%;
-}
-
-.rating-star .rate-60 {
-  width: 60%;
-}
-
-.rating-star .rate-50 {
-  width: 50%;
-}
-
-.rating-star .rate-40 {
-  width: 40%;
-}
-
-.rating-star .rate-30 {
-  width: 30%;
-}
-
-.rating-star .rate-20 {
-  width: 20%;
-}
-
-.rating-star .rate-10 {
-  width: 10%;
-}
-.rating-star .rate-5 {
-  width: 100%;
-}
-
-.rating-star .rate-4 {
-  width: 80%;
-}
-
-.rating-star .rate-3 {
-  width: 60%;
-}
-
-.rating-star .rate-2 {
-  width: 40%;
-}
-.rating-star .rate-1 {
-  width: 20%;
-}
-}
 // 投稿完了を知らせるページ
 .contentss {
- text-align:center;
+  text-align: center;
 
-.raw {
+  .raw {
     width: 100%;
     margin-bottom: 0;
     max-width: 660px;
-     }
-    .success {
-     margin: 20px 0;
+  }
+
+  .success {
+    margin: 20px 0;
     padding: 30px;
     box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-    background-color:#fff8dc ;
+    background-color: #fff8dc;
     box-sizing: border-box;
-    }
+  }
 }
 
 // トップページの星のデザイン
-
